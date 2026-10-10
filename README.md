@@ -116,3 +116,7 @@ This validates text extraction, redirects, response limits, error-page text, uns
 - Installation on another Mac and distribution signing remain to be validated.
 
 Report problems with the macOS/Safari versions, the command used, and the displayed error. Avoid sharing private bookmarks or saved page excerpts in public issues.
+
+## License
+
+Released under the [MIT License](LICENSE). Copyright © 2026 Jim Kelley.
