@@ -1,0 +1,6 @@
+:root { color-scheme: light dark; font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
+body { width: 290px; margin: 0; padding: 20px; }
+h1 { font-size: 18px; margin: 0 0 12px; }
+p { font-size: 13px; line-height: 1.5; }
+.button { display: block; padding: 10px; background: #0069ce; color: white; text-align: center; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 13px; }
+.note { opacity: 0.7; font-size: 12px; margin-bottom: 0; }

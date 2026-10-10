@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Safari Bookmark Checker",
+  "description": "Open the read-only Safari bookmark checker to scan and review your saved links.",
+  "version": "0.1.0",
+  "action": {
+    "default_title": "Safari Bookmark Checker",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "icon.png"
+    }
+  },
+  "icons": {
+    "128": "icon.png"
+  }
+}

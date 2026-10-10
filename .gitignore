@@ -1,0 +1,11 @@
+Build/
+.DS_Store
+xcuserdata/
+*.xcuserstate
+.env
+.env.*
+*.p12
+*.p8
+*.cer
+*.mobileprovision
+*.provisionprofile

@@ -1,0 +1,618 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 110;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		910459AF3079CEBA007A170E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910459AE3079CEBA007A170E /* AppDelegate.swift */; };
+		910459B33079CEBA007A170E /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 910459B13079CEBA007A170E /* Main.html */; };
+		910459B53079CEBA007A170E /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 910459B43079CEBA007A170E /* Icon.png */; };
+		910459B73079CEBA007A170E /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 910459B63079CEBA007A170E /* Style.css */; };
+		910459B93079CEBA007A170E /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = 910459B83079CEBA007A170E /* Script.js */; };
+		910459BB3079CEBA007A170E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910459BA3079CEBA007A170E /* ViewController.swift */; };
+		910459BE3079CEBA007A170E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 910459BC3079CEBA007A170E /* Main.storyboard */; };
+		910459C03079CEBA007A170E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 910459BF3079CEBA007A170E /* Assets.xcassets */; };
+		910459C73079CEBA007A170E /* Safari Bookmark Checker Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 910459C63079CEBA007A170E /* Safari Bookmark Checker Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		910459CC3079CEBA007A170E /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910459CB3079CEBA007A170E /* SafariWebExtensionHandler.swift */; };
+		910459DB3079CEBA007A170E /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = 910459D83079CEBA007A170E /* popup.html */; };
+		910459DC3079CEBA007A170E /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 910459D93079CEBA007A170E /* manifest.json */; };
+		910459DD3079CEBA007A170E /* popup.css in Resources */ = {isa = PBXBuildFile; fileRef = 910459DA3079CEBA007A170E /* popup.css */; };
+		B00D00000000000000000000 /* Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00C00000000000000000000; };
+		B00D00000000000000000001 /* BookmarkDuplicateDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00C00000000000000000001; };
+		B00D00000000000000000002 /* BookmarkReaderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00C00000000000000000002; };
+		B00D00000000000000000003 /* BookmarkStatusFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00C00000000000000000003; };
+		B00D00000000000000000004 /* BookmarkValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00C00000000000000000004; };
+		B00E00000000000000000002 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B00E00000000000000000001; };
+		B01000000000000000000000 /* PageContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F00000000000000000000; };
+		B01000000000000000000001 /* AIPageReviewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F00000000000000000001; };
+		B01000000000000000000002 /* AIPageReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F00000000000000000002; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		910459C83079CEBA007A170E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 910459A33079CEBA007A170E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 910459C53079CEBA007A170E;
+			remoteInfo = "Safari Bookmark Checker Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		910459D33079CEBA007A170E /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			dstPath = "";
+			dstSubfolder = PlugIns;
+			files = (
+				910459C73079CEBA007A170E /* Safari Bookmark Checker Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		910459AB3079CEBA007A170E /* Safari Bookmark Checker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Safari Bookmark Checker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		910459AE3079CEBA007A170E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		910459B23079CEBA007A170E /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = Base.lproj/Main.html; sourceTree = "<group>"; };
+		910459B43079CEBA007A170E /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		910459B63079CEBA007A170E /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
+		910459B83079CEBA007A170E /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
+		910459BA3079CEBA007A170E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		910459BD3079CEBA007A170E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		910459BF3079CEBA007A170E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		910459C13079CEBA007A170E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		910459C63079CEBA007A170E /* Safari Bookmark Checker Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Safari Bookmark Checker Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		910459CB3079CEBA007A170E /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		910459CD3079CEBA007A170E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		910459D83079CEBA007A170E /* popup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = popup.html; path = ../../../Extension/popup.html; sourceTree = "<group>"; };
+		910459D93079CEBA007A170E /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = manifest.json; path = ../../../Extension/manifest.json; sourceTree = "<group>"; };
+		910459DA3079CEBA007A170E /* popup.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = popup.css; path = ../../../Extension/popup.css; sourceTree = "<group>"; };
+		B00C00000000000000000000 /* Bookmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "../../Sources/Bookmark.swift"; sourceTree = SOURCE_ROOT; };
+		B00C00000000000000000001 /* BookmarkDuplicateDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "../../Sources/BookmarkDuplicateDetector.swift"; sourceTree = SOURCE_ROOT; };
+		B00C00000000000000000002 /* BookmarkReaderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "../../Sources/BookmarkReaderApp.swift"; sourceTree = SOURCE_ROOT; };
+		B00C00000000000000000003 /* BookmarkStatusFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "../../Sources/BookmarkStatusFilter.swift"; sourceTree = SOURCE_ROOT; };
+		B00C00000000000000000004 /* BookmarkValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "../../Sources/BookmarkValidator.swift"; sourceTree = SOURCE_ROOT; };
+		B00E00000000000000000001 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ../../Extension/icon.png; sourceTree = SOURCE_ROOT; };
+		B00F00000000000000000000 /* PageContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "../../Sources/PageContent.swift"; sourceTree = SOURCE_ROOT; };
+		B00F00000000000000000001 /* AIPageReviewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "../../Sources/AIPageReviewer.swift"; sourceTree = SOURCE_ROOT; };
+		B00F00000000000000000002 /* AIPageReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "../../Sources/AIPageReviewView.swift"; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		910459A83079CEBA007A170E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+		910459C33079CEBA007A170E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		910459A23079CEBA007A170E = {
+			isa = PBXGroup;
+			children = (
+				910459AD3079CEBA007A170E /* Safari Bookmark Checker */,
+				910459CA3079CEBA007A170E /* Safari Bookmark Checker Extension */,
+				910459AC3079CEBA007A170E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		910459AC3079CEBA007A170E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				910459AB3079CEBA007A170E /* Safari Bookmark Checker.app */,
+				910459C63079CEBA007A170E /* Safari Bookmark Checker Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		910459AD3079CEBA007A170E /* Safari Bookmark Checker */ = {
+			isa = PBXGroup;
+			children = (
+				B00F00000000000000000000 /* PageContent.swift */,
+				B00F00000000000000000001 /* AIPageReviewer.swift */,
+				B00F00000000000000000002 /* AIPageReviewView.swift */,
+				B00C00000000000000000000 /* Bookmark.swift */,
+				B00C00000000000000000001 /* BookmarkDuplicateDetector.swift */,
+				B00C00000000000000000002 /* BookmarkReaderApp.swift */,
+				B00C00000000000000000003 /* BookmarkStatusFilter.swift */,
+				B00C00000000000000000004 /* BookmarkValidator.swift */,
+				910459AE3079CEBA007A170E /* AppDelegate.swift */,
+				910459BA3079CEBA007A170E /* ViewController.swift */,
+				910459BC3079CEBA007A170E /* Main.storyboard */,
+				910459BF3079CEBA007A170E /* Assets.xcassets */,
+				910459C13079CEBA007A170E /* Info.plist */,
+				910459B03079CEBA007A170E /* Resources */,
+			);
+			path = "Safari Bookmark Checker";
+			sourceTree = "<group>";
+		};
+		910459B03079CEBA007A170E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				910459B13079CEBA007A170E /* Main.html */,
+				910459B43079CEBA007A170E /* Icon.png */,
+				910459B63079CEBA007A170E /* Style.css */,
+				910459B83079CEBA007A170E /* Script.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		910459CA3079CEBA007A170E /* Safari Bookmark Checker Extension */ = {
+			isa = PBXGroup;
+			children = (
+				910459D73079CEBA007A170E /* Resources */,
+				910459CB3079CEBA007A170E /* SafariWebExtensionHandler.swift */,
+				910459CD3079CEBA007A170E /* Info.plist */,
+			);
+			path = "Safari Bookmark Checker Extension";
+			sourceTree = "<group>";
+		};
+		910459D73079CEBA007A170E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B00E00000000000000000001 /* icon.png */,
+				910459D83079CEBA007A170E /* popup.html */,
+				910459D93079CEBA007A170E /* manifest.json */,
+				910459DA3079CEBA007A170E /* popup.css */,
+			);
+			name = Resources;
+			path = "Safari Bookmark Checker Extension";
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		910459AA3079CEBA007A170E /* Safari Bookmark Checker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 910459D43079CEBA007A170E /* Build configuration list for PBXNativeTarget "Safari Bookmark Checker" */;
+			buildPhases = (
+				910459A73079CEBA007A170E /* Sources */,
+				910459A83079CEBA007A170E /* Frameworks */,
+				910459A93079CEBA007A170E /* Resources */,
+				910459D33079CEBA007A170E /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				910459C93079CEBA007A170E /* PBXTargetDependency */,
+			);
+			name = "Safari Bookmark Checker";
+			productName = "Safari Bookmark Checker";
+			productReference = 910459AB3079CEBA007A170E /* Safari Bookmark Checker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		910459C53079CEBA007A170E /* Safari Bookmark Checker Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 910459D03079CEBA007A170E /* Build configuration list for PBXNativeTarget "Safari Bookmark Checker Extension" */;
+			buildPhases = (
+				910459C23079CEBA007A170E /* Sources */,
+				910459C33079CEBA007A170E /* Frameworks */,
+				910459C43079CEBA007A170E /* Resources */,
+			);
+			buildRules = (
+			);
+			name = "Safari Bookmark Checker Extension";
+			productName = "Safari Bookmark Checker Extension";
+			productReference = 910459C63079CEBA007A170E /* Safari Bookmark Checker Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		910459A33079CEBA007A170E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2700;
+				LastUpgradeCheck = 2700;
+				TargetAttributes = {
+					910459AA3079CEBA007A170E = {
+						CreatedOnToolsVersion = 27.0;
+					};
+					910459C53079CEBA007A170E = {
+						CreatedOnToolsVersion = 27.0;
+					};
+				};
+			};
+			buildConfigurationList = 910459A63079CEBA007A170E /* Build configuration list for PBXProject "Safari Bookmark Checker" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 910459A23079CEBA007A170E;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 910459AC3079CEBA007A170E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				910459AA3079CEBA007A170E /* Safari Bookmark Checker */,
+				910459C53079CEBA007A170E /* Safari Bookmark Checker Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		910459A93079CEBA007A170E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+				910459B53079CEBA007A170E /* Icon.png in Resources */,
+				910459B93079CEBA007A170E /* Script.js in Resources */,
+				910459B33079CEBA007A170E /* Main.html in Resources */,
+				910459C03079CEBA007A170E /* Assets.xcassets in Resources */,
+				910459B73079CEBA007A170E /* Style.css in Resources */,
+			);
+		};
+		910459C43079CEBA007A170E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+				B00E00000000000000000002 /* icon.png in Resources */,
+				910459DC3079CEBA007A170E /* manifest.json in Resources */,
+				910459DB3079CEBA007A170E /* popup.html in Resources */,
+				910459DD3079CEBA007A170E /* popup.css in Resources */,
+			);
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		910459A73079CEBA007A170E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+				B01000000000000000000000 /* PageContent.swift in Sources */,
+				B01000000000000000000001 /* AIPageReviewer.swift in Sources */,
+				B01000000000000000000002 /* AIPageReviewView.swift in Sources */,
+				B00D00000000000000000000 /* Bookmark.swift in Sources */,
+				B00D00000000000000000001 /* BookmarkDuplicateDetector.swift in Sources */,
+				B00D00000000000000000002 /* BookmarkReaderApp.swift in Sources */,
+				B00D00000000000000000003 /* BookmarkStatusFilter.swift in Sources */,
+				B00D00000000000000000004 /* BookmarkValidator.swift in Sources */,
+			);
+		};
+		910459C23079CEBA007A170E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+				910459CC3079CEBA007A170E /* SafariWebExtensionHandler.swift in Sources */,
+			);
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		910459C93079CEBA007A170E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 910459C53079CEBA007A170E /* Safari Bookmark Checker Extension */;
+			targetProxy = 910459C83079CEBA007A170E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		910459B13079CEBA007A170E /* Main.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				910459B23079CEBA007A170E /* Base */,
+			);
+			name = Main.html;
+			sourceTree = "<group>";
+		};
+		910459BC3079CEBA007A170E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				910459BD3079CEBA007A170E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		910459CE3079CEBA007A170E /* Debug configuration for PBXProject "Safari Bookmark Checker" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		910459CF3079CEBA007A170E /* Release configuration for PBXProject "Safari Bookmark Checker" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		910459D13079CEBA007A170E /* Debug configuration for PBXNativeTarget "Safari Bookmark Checker Extension" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Safari Bookmark Checker Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Safari Bookmark Checker Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jimkelley.SafariBookmarkCheckerExtension.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		910459D23079CEBA007A170E /* Release configuration for PBXNativeTarget "Safari Bookmark Checker Extension" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Safari Bookmark Checker Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Safari Bookmark Checker Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jimkelley.SafariBookmarkCheckerExtension.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		910459D53079CEBA007A170E /* Debug configuration for PBXNativeTarget "Safari Bookmark Checker" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = "Safari Bookmark Checker/BookmarkChecker.entitlements";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Safari Bookmark Checker/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Safari Bookmark Checker";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				INFOPLIST_KEY_NSViewGestureRecognizerIsExclusive = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jimkelley.SafariBookmarkCheckerExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		910459D63079CEBA007A170E /* Release configuration for PBXNativeTarget "Safari Bookmark Checker" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = "Safari Bookmark Checker/BookmarkChecker.entitlements";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Safari Bookmark Checker/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Safari Bookmark Checker";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				INFOPLIST_KEY_NSViewGestureRecognizerIsExclusive = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jimkelley.SafariBookmarkCheckerExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		910459A63079CEBA007A170E /* Build configuration list for PBXProject "Safari Bookmark Checker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				910459CE3079CEBA007A170E /* Debug configuration for PBXProject "Safari Bookmark Checker" */,
+				910459CF3079CEBA007A170E /* Release configuration for PBXProject "Safari Bookmark Checker" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		910459D03079CEBA007A170E /* Build configuration list for PBXNativeTarget "Safari Bookmark Checker Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				910459D13079CEBA007A170E /* Debug configuration for PBXNativeTarget "Safari Bookmark Checker Extension" */,
+				910459D23079CEBA007A170E /* Release configuration for PBXNativeTarget "Safari Bookmark Checker Extension" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		910459D43079CEBA007A170E /* Build configuration list for PBXNativeTarget "Safari Bookmark Checker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				910459D53079CEBA007A170E /* Debug configuration for PBXNativeTarget "Safari Bookmark Checker" */,
+				910459D63079CEBA007A170E /* Release configuration for PBXNativeTarget "Safari Bookmark Checker" */,
+			);
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 910459A33079CEBA007A170E /* Project object */;
+	validationLevel = 1;
+}
