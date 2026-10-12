@@ -1,0 +1,25 @@
+Safari Bookmark Checker — development test package
+
+This package contains an Apple Development-signed app for Apple silicon.
+It is not Developer ID signed or notarized. Other-Mac installation and Safari
+extension activation have not yet been verified. macOS may block this build.
+A DMG does not change its signing status.
+
+1. Drag Safari Bookmark Checker.app into Applications.
+2. Open the app once.
+3. Grant the app Full Disk Access in System Settings > Privacy & Security.
+   Quit and reopen the app afterward.
+4. Enable Safari Bookmark Checker Extension in Safari > Settings > Extensions.
+5. Click Read Safari Bookmarks in the app.
+
+If Safari does not offer the development extension, testing may require Safari's
+web developer settings and Allow unsigned extensions. If this still fails,
+build the source using your own free Apple Development team in Xcode.
+Do not disable system-wide security protections to install this test build.
+
+The app targets macOS 15 or later. AI review requires macOS 26 or later,
+Apple Intelligence enabled, and an available on-device model.
+The app reads bookmarks but never edits or deletes them.
+
+Source and build instructions:
+https://github.com/KwisatzJim/safari-bookmark-checker-extension

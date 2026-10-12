@@ -23,6 +23,19 @@ The current development build has been tested on Apple silicon. Intel compatibil
 
 Build from source with Xcode 26 or later installed at `/Applications/Xcode.app`. The validation scripts also require Python 3.
 
+## Development test package
+
+While Developer ID signing is unavailable, a development-signed DMG can be prepared for testing:
+
+```sh
+./Scripts/build-development.sh
+./Scripts/package-development.sh
+```
+
+The packaging script verifies the app signature, copies the Apple silicon build into a compressed disk image with an Applications shortcut, installation notes, and the MIT license, then verifies the image and writes a SHA-256 checksum. Output is in `Build/Packages/`.
+
+This is a development test package, not a notarized public release. A free Personal Team does not provide Developer ID certificates or notarization. macOS may block the app, and Safari may require developer settings to enable the extension. Installation on another Mac remains unverified. If the packaged build cannot be used, build from source with your own development team. Packaging does not remove these restrictions.
+
 ## Set up the app
 
 1. Build the app using the instructions below and open **Safari Bookmark Checker.app** once.
