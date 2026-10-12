@@ -198,8 +198,8 @@ struct ReaderView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
-            Text("Safari Bookmark Reader").font(.largeTitle.bold())
-            Text("Read-only prototype • Your bookmarks will not be changed.")
+            Text("Safari Bookmark Checker").font(.largeTitle.bold())
+            Text("Read-only • Your bookmarks will not be changed.")
                 .foregroundStyle(.secondary)
             HStack {
                 Button(inventory == nil ? "Read Safari Bookmarks" : "Refresh") { readBookmarks() }
@@ -214,8 +214,8 @@ struct ReaderView: View {
             }
             if let errorMessage {
                 Text(errorMessage).foregroundStyle(.red).textSelection(.enabled)
-                Text("If access was denied, add this prototype app to System Settings → Privacy & Security → Full Disk Access. Then quit and reopen it.")
-                Text("The app is in this project’s Build folder.").foregroundStyle(.secondary)
+                Text("If access was denied, add Safari Bookmark Checker to System Settings → Privacy & Security → Full Disk Access. Then quit and reopen it.")
+                Text("Choose the copy of the app you are currently running.").foregroundStyle(.secondary)
             }
             if let saveError {
                 Text(saveError).foregroundStyle(.red)

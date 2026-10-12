@@ -9,3 +9,5 @@ xcuserdata/
 *.cer
 *.mobileprovision
 *.provisionprofile
+__pycache__/
+*.pyc

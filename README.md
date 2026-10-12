@@ -19,7 +19,9 @@ The extension opens the companion Mac app, where bookmark reading, checks, and r
 
 The project targets macOS 15 or later. Local AI review requires macOS 26 or later on a Mac eligible for Apple Intelligence, with Apple Intelligence enabled and its model ready. Ordinary link checking does not require AI.
 
-The current development build has been tested on Apple silicon. Intel compatibility and behavior on a second Mac have not yet been verified. A signed, notarized installer is not available yet; distribution preparation is in progress.
+The development app and Safari extension have been tested on Apple silicon, including a second Mac. Intel compatibility and Safari profile coverage remain unverified. The downloadable app is Apple Development signed, not Developer ID signed or notarized.
+
+Download the DMG and checksum from [v0.1.0-dev.1](https://github.com/KwisatzJim/safari-bookmark-checker-extension/releases/tag/v0.1.0-dev.1). This is a development prerelease for testers, not a notarized general-distribution release.
 
 Build from source with Xcode 26 or later installed at `/Applications/Xcode.app`. The validation scripts also require Python 3.
 
@@ -32,13 +34,13 @@ While Developer ID signing is unavailable, a development-signed DMG can be prepa
 ./Scripts/package-development.sh
 ```
 
-The packaging script verifies the app signature, copies the Apple silicon build into a compressed disk image with an Applications shortcut, installation notes, and the MIT license, then verifies the image and writes a SHA-256 checksum. Output is in `Build/Packages/`.
+The packaging script verifies the app signature, copies the Apple silicon build into a compressed disk image with an Applications shortcut, installation notes, and the MIT license, then verifies the image and writes a SHA-256 checksum. Versioned DMG and checksum files are written to `Build/Packages/`.
 
-This is a development test package, not a notarized public release. A free Personal Team does not provide Developer ID certificates or notarization. macOS may block the app, and Safari may require developer settings to enable the extension. Installation on another Mac remains unverified. If the packaged build cannot be used, build from source with your own development team. Packaging does not remove these restrictions.
+This is a development test package, not a notarized public release. A free Personal Team does not provide Developer ID certificates or notarization. macOS may block the app, and Safari may require developer settings to enable the extension. The development package was confirmed working on a second Mac, but behavior on other machines may differ. If the packaged build cannot be used, build from source with your own development team. Packaging does not remove these restrictions.
 
 ## Set up the app
 
-1. Build the app using the instructions below and open **Safari Bookmark Checker.app** once.
+1. Download the development DMG, open it, drag **Safari Bookmark Checker.app** into **Applications**, and open it once. Alternatively, build from source below.
 2. In **System Settings → Privacy & Security → Full Disk Access**, add the app and enable access. Quit and reopen the app afterward.
 3. In **Safari → Settings → Extensions**, enable **Safari Bookmark Checker Extension**. Restart Safari if the newly built extension has not appeared.
 4. Click the toolbar extension and choose **Open Bookmark Checker**, or open the companion app directly.
@@ -90,6 +92,8 @@ Alternatively, use the development build script with your Apple Development sign
 BOOKMARK_CHECKER_TEAM=YOUR_TEAM_ID ./Scripts/build-development.sh
 ```
 
+If several signing identities are installed, set `BOOKMARK_CHECKER_SIGNING_IDENTITY` to the identity name or certificate SHA-1 shown by `security find-identity -v -p codesigning`.
+
 The script currently defaults to the original developer’s team. Other contributors should supply their own team identifier. The app is built at:
 
 ```text
@@ -108,7 +112,13 @@ python3 Tests/run-page-review-validation.py
 
 This validates text extraction, redirects, response limits, error-page text, unsupported content, empty pages, cancellation, saved-review serialization, preferences reload, and changed-address rejection. When available, the actual on-device model also reviews a sample lesson and a sign-in page. Model availability is reported when inference cannot run.
 
-`Tests/HeadFallbackValidation.swift` separately covers HEAD 404 followed by GET 200, genuine GET 404, and HTTP 410.
+The same runner executes `Tests/HeadFallbackValidation.swift` for HEAD 404 followed by GET 200, genuine GET 404, and HTTP 410. Add `--skip-model` to run deterministic checks without invoking the local model.
+
+To verify a downloaded DMG, place its `.sha256` file in the same directory and run:
+
+```sh
+shasum -a 256 -c Safari-Bookmark-Checker-0.1.0-development-arm64.dmg.sha256
+```
 
 ## Project layout
 
@@ -126,7 +136,7 @@ This validates text extraction, redirects, response limits, error-page text, uns
 - Safari profile coverage has not been verified.
 - Sign-in, bot protection, and JavaScript-dependent sites may need manual browser verification.
 - Saved AI reviews describe the content fetched at their recorded time; websites may change afterward.
-- Installation on another Mac and distribution signing remain to be validated.
+- The development workflow has been confirmed on a second Mac. Developer ID signing, notarization, and a notarized installation test are pending paid-account access.
 
 Report problems with the macOS/Safari versions, the command used, and the displayed error. Avoid sharing private bookmarks or saved page excerpts in public issues.
 

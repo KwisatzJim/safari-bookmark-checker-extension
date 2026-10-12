@@ -1,8 +1,8 @@
 Safari Bookmark Checker — development test package
 
 This package contains an Apple Development-signed app for Apple silicon.
-It is not Developer ID signed or notarized. Other-Mac installation and Safari
-extension activation have not yet been verified. macOS may block this build.
+It is not Developer ID signed or notarized. The development workflow has been tested on a second Mac; installation
+may still differ on other machines. macOS may block this build.
 A DMG does not change its signing status.
 
 1. Drag Safari Bookmark Checker.app into Applications.

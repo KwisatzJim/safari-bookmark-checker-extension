@@ -1,14 +1,22 @@
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
-import os, subprocess, threading, time
+import os, subprocess, sys, threading, time
 
 project = Path(__file__).resolve().parents[1]
 class Fixture(BaseHTTPRequestHandler):
+    def do_HEAD(self):
+        self.send_response(410 if self.path == '/gone' else 404)
+        self.send_header('Content-Length', '0')
+        self.end_headers()
     def log_message(self, *args): pass
     def do_GET(self):
         status = 200
         content_type = 'text/html; charset=utf-8'
-        if self.path == '/redirect':
+        if self.path == '/head404':
+            body = b'<p>Working GET response</p>'
+        elif self.path == '/gone':
+            status, body = 410, b'<p>Gone</p>'
+        elif self.path == '/redirect':
             self.send_response(302)
             self.send_header('Location', '/article')
             self.send_header('Content-Length', '0')
@@ -44,13 +52,20 @@ server = ThreadingHTTPServer(('127.0.0.1', 0), Fixture)
 threading.Thread(target=server.serve_forever, daemon=True).start()
 try:
     env = dict(os.environ, DEVELOPER_DIR='/Applications/Xcode.app/Contents/Developer')
+    (project / 'Build').mkdir(exist_ok=True)
     executable = project / 'Build/PageReviewValidation'
     subprocess.run(['xcrun', 'swiftc', '-module-cache-path', str(project/'Build/ModuleCache'),
                     '-external-plugin-path', '/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/swift/host/plugins#/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/bin/swift-plugin-server',
                     '-parse-as-library', str(project/'Sources/PageContent.swift'),
                     str(project/'Sources/AIPageReviewer.swift'), str(project/'Tests/PageReviewValidation.swift'),
                     '-o', str(executable)], env=env, check=True)
-    subprocess.run([str(executable), f'http://127.0.0.1:{server.server_port}', '--model'], check=True)
+    model_args = [] if '--skip-model' in sys.argv else ['--model']
+    subprocess.run([str(executable), f'http://127.0.0.1:{server.server_port}', *model_args], check=True)
+    validator_executable = project / 'Build/HeadFallbackValidation'
+    subprocess.run(['xcrun', 'swiftc', '-parse-as-library', '-module-cache-path', str(project/'Build/ModuleCache'),
+                    str(project/'Sources/Bookmark.swift'), str(project/'Sources/BookmarkValidator.swift'),
+                    str(project/'Tests/HeadFallbackValidation.swift'), '-o', str(validator_executable)], env=env, check=True)
+    subprocess.run([str(validator_executable), f'http://127.0.0.1:{server.server_port}'], check=True)
 finally:
     server.shutdown()
     server.server_close()
