@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.1 — 2026-10-21
+
+- Add the standalone Safari Bookmark Checker icon to the extension companion app so it appears in Finder and the Dock.
+- Retain Developer ID signing, hardened runtime, and Apple notarization.
+
 ## 0.1.0 — 2026-10-21
 
 - Distribute an Apple silicon Release app and Safari extension signed with Developer ID.

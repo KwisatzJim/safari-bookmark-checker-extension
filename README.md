@@ -21,7 +21,7 @@ The project targets macOS 15 or later. Local AI review requires macOS 26 or late
 
 The downloadable Apple silicon app and embedded Safari extension are Developer ID signed with hardened runtime and Apple notarization. The signed Release app was confirmed to launch and read bookmarks locally. The earlier development workflow was tested on a second Mac; installation and persistent extension activation of this notarized release on a second Mac remain unverified. Intel compatibility and Safari profile coverage remain unverified.
 
-Download the DMG and checksum from [v0.1.0](https://github.com/KwisatzJim/safari-bookmark-checker-extension/releases/tag/v0.1.0). Choose `Safari-Bookmark-Checker-0.1.0-arm64.dmg` for Apple silicon Macs.
+Download the DMG and checksum from [v0.1.1](https://github.com/KwisatzJim/safari-bookmark-checker-extension/releases/tag/v0.1.1). Choose `Safari-Bookmark-Checker-0.1.1-arm64.dmg` for Apple silicon Macs.
 
 Build from source with Xcode 26 or later installed at `/Applications/Xcode.app`. The validation scripts also require Python 3.
 
@@ -131,7 +131,7 @@ The same runner executes `Tests/HeadFallbackValidation.swift` for HEAD 404 follo
 To verify a downloaded DMG, place its `.sha256` file in the same directory and run:
 
 ```sh
-shasum -a 256 -c Safari-Bookmark-Checker-0.1.0-arm64.dmg.sha256
+shasum -a 256 -c Safari-Bookmark-Checker-0.1.1-arm64.dmg.sha256
 ```
 
 ## Project layout

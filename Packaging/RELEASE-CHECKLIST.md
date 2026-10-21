@@ -37,3 +37,17 @@ GitHub publication uses tag `v0.1.0-dev.1`, marked prerelease, with the developm
 7. Update the README, installation notes, version, changelog, and GitHub release assets/status for the notarized release.
 
 Intel support and Safari profile coverage remain separate, unverified compatibility work. Do not claim support until tested. Preserve bundle identifiers for app preferences continuity; a signing change may require users to grant permissions again.
+
+## v0.1.1 — 2026-10-21
+
+- [x] Reuse the standalone app icon at all ten macOS icon slots.
+- [x] Verify compiled AppIcon.icns visually and confirm bundle icon metadata.
+- [x] Align native app, extension, and manifest to 0.1.1 (native build 3).
+- [x] Developer ID Release build and signature verification passed.
+- [x] Apple accepted app submission `cd4d920f-8ba0-4f2c-a226-b21829f71641`.
+- [x] Stapled app ticket validated and Gatekeeper accepted the app.
+
+- [x] Apple accepted DMG submission `021f02a2-a4a7-49ef-b3c6-d786bc7db6e3`.
+- [x] Stapled DMG ticket, signatures, Gatekeeper, mounted app/icon, and checksum verified.
+
+Second-Mac notarized installation and persistent extension activation remain pending.
