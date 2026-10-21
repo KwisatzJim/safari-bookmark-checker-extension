@@ -19,15 +19,15 @@ The extension opens the companion Mac app, where bookmark reading, checks, and r
 
 The project targets macOS 15 or later. Local AI review requires macOS 26 or later on a Mac eligible for Apple Intelligence, with Apple Intelligence enabled and its model ready. Ordinary link checking does not require AI.
 
-The development app and Safari extension have been tested on Apple silicon, including a second Mac. Intel compatibility and Safari profile coverage remain unverified. The downloadable app is Apple Development signed, not Developer ID signed or notarized.
+The downloadable Apple silicon app and embedded Safari extension are Developer ID signed with hardened runtime and Apple notarization. The signed Release app was confirmed to launch and read bookmarks locally. The earlier development workflow was tested on a second Mac; installation and persistent extension activation of this notarized release on a second Mac remain unverified. Intel compatibility and Safari profile coverage remain unverified.
 
-Download the DMG and checksum from [v0.1.0-dev.1](https://github.com/KwisatzJim/safari-bookmark-checker-extension/releases/tag/v0.1.0-dev.1). This is a development prerelease for testers, not a notarized general-distribution release.
+Download the DMG and checksum from [v0.1.0](https://github.com/KwisatzJim/safari-bookmark-checker-extension/releases/tag/v0.1.0). Choose `Safari-Bookmark-Checker-0.1.0-arm64.dmg` for Apple silicon Macs.
 
 Build from source with Xcode 26 or later installed at `/Applications/Xcode.app`. The validation scripts also require Python 3.
 
 ## Development test package
 
-While Developer ID signing is unavailable, a development-signed DMG can be prepared for testing:
+For source development, a development-signed DMG can still be prepared for testing:
 
 ```sh
 ./Scripts/build-development.sh
@@ -40,11 +40,13 @@ This is a development test package, not a notarized public release. A free Perso
 
 ## Set up the app
 
-1. Download the development DMG, open it, drag **Safari Bookmark Checker.app** into **Applications**, and open it once. Alternatively, build from source below.
+1. Download the release DMG, open it, drag **Safari Bookmark Checker.app** into **Applications**, and open it once. Alternatively, build from source below.
 2. In **System Settings → Privacy & Security → Full Disk Access**, add the app and enable access. Quit and reopen the app afterward.
 3. In **Safari → Settings → Extensions**, enable **Safari Bookmark Checker Extension**. Restart Safari if the newly built extension has not appeared.
 4. Click the toolbar extension and choose **Open Bookmark Checker**, or open the companion app directly.
 5. Click **Read Safari Bookmarks**.
+
+After replacing a development build, you may need to remove and re-add the app in Full Disk Access because its signing identity has changed.
 
 Full Disk Access is needed to read `~/Library/Safari/Bookmarks.plist`. macOS may also request Automation permission when **Show Safari Bookmarks** asks Safari to display its bookmark view.
 
@@ -100,7 +102,19 @@ The script currently defaults to the original developer’s team. Other contribu
 Build/DevelopmentSigned/Build/Products/Debug/Safari Bookmark Checker.app
 ```
 
-A development-signed build is intended for local testing. Distribution outside the Mac App Store requires a Developer ID signing workflow and notarization. The older ad-hoc build scripts are retained for experiments; they are not the recommended installation or distribution path.
+A development-signed build is intended for local testing. The published release uses Developer ID signing and notarization. The older ad-hoc build scripts are retained for experiments; they are not the recommended installation or distribution path.
+
+## Developer ID release builds
+
+With your own Developer ID Application certificate installed:
+
+```sh
+BOOKMARK_CHECKER_TEAM=YOUR_TEAM_ID \
+BOOKMARK_CHECKER_SIGNING_IDENTITY="Developer ID Application: Your Name (YOUR_TEAM_ID)" \
+./Scripts/build-release.sh
+```
+
+This builds an arm64 Release app targeting macOS 15 with hardened runtime, secure timestamps, and no debugging entitlement. Submit a ZIP containing the app using `xcrun notarytool` and your own Keychain profile. After Apple accepts it, staple the ticket to the app. Run `Scripts/package-release.sh` with the same signing identity, submit the resulting DMG for notarization, staple its accepted ticket, then generate the final SHA-256 checksum. Verify signatures, stapling, Gatekeeper acceptance, and mounted DMG contents before publishing. Keep credentials in Keychain, outside this repository.
 
 ## Validation
 
@@ -117,7 +131,7 @@ The same runner executes `Tests/HeadFallbackValidation.swift` for HEAD 404 follo
 To verify a downloaded DMG, place its `.sha256` file in the same directory and run:
 
 ```sh
-shasum -a 256 -c Safari-Bookmark-Checker-0.1.0-development-arm64.dmg.sha256
+shasum -a 256 -c Safari-Bookmark-Checker-0.1.0-arm64.dmg.sha256
 ```
 
 ## Project layout
@@ -136,7 +150,7 @@ shasum -a 256 -c Safari-Bookmark-Checker-0.1.0-development-arm64.dmg.sha256
 - Safari profile coverage has not been verified.
 - Sign-in, bot protection, and JavaScript-dependent sites may need manual browser verification.
 - Saved AI reviews describe the content fetched at their recorded time; websites may change afterward.
-- The development workflow has been confirmed on a second Mac. Developer ID signing, notarization, and a notarized installation test are pending paid-account access.
+- The development workflow has been confirmed on a second Mac. A second-Mac installation and persistent Safari extension activation test of the notarized release remains pending.
 
 Report problems with the macOS/Safari versions, the command used, and the displayed error. Avoid sharing private bookmarks or saved page excerpts in public issues.
 

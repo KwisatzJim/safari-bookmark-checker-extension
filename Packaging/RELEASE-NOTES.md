@@ -1,29 +1,22 @@
-First development prerelease of Safari Bookmark Checker Extension.
+Safari Bookmark Checker 0.1.0 is the first Developer ID-signed and notarized release for Apple silicon Macs.
 
-### Download and install
+### Install
 
-For **Apple silicon Macs**, download `Safari-Bookmark-Checker-0.1.0-development-arm64.dmg`. Open the disk image and drag the app into Applications. Open it once, grant Full Disk Access, quit/reopen it, and enable Safari Bookmark Checker Extension in Safari Settings → Extensions.
+Download `Safari-Bookmark-Checker-0.1.0-arm64.dmg`, open it, and drag the app into Applications. Open the app, grant Full Disk Access in System Settings, quit and reopen it, then enable Safari Bookmark Checker Extension in Safari Settings → Extensions.
 
-The DMG includes installation notes and the MIT license. The companion `.sha256` asset lets you verify the download. GitHub also provides the source archives for this tagged version.
+If replacing the development build, you may need to remove and re-add the Full Disk Access permission. The DMG includes installation notes and the MIT license. A SHA-256 checksum is provided alongside it.
 
 ### Included
 
-- Read-only direct Safari bookmark scanning; no HTML export/import.
-- Selected, filtered, and full link checks; redirects, duplicates, search, folder/status filters, and sorting.
-- On-device AI page reviews for one or several selected bookmarks, with saved results and cancellation.
-- Persistent link-check results, manual Safari verification, and a scrolling details panel.
+- Direct, read-only Safari bookmark scanning without export/import.
+- Link checking, redirects, duplicates, search, filtering, and saved results.
+- Optional on-device AI page reviews with saved assessments and cancellation.
+- Developer ID signatures, hardened runtime, secure timestamps, Apple notarization, and stapled approval tickets.
 
-### Requirements and limitations
+### Requirements and validation
 
-- App targets macOS 15 or later; packaged binary is arm64 only.
-- AI review requires macOS 26 or later, Apple Intelligence enabled, and a ready on-device model.
-- **Apple Development signed; not Developer ID signed or notarized.** macOS may block this development build, and Safari may require developer settings. If necessary, build from source with your own free development team. Do not disable system-wide security protections.
-- Full Disk Access is required because the companion app reads Safari’s saved bookmark file. It never edits or deletes bookmarks.
-- Sign-in and JavaScript-dependent pages may need manual verification in Safari. AI assessments do not override link-check status.
-- Profile coverage and Intel compatibility remain unverified.
+Requires macOS 15 or later on Apple silicon. AI reviews require macOS 26, Apple Intelligence enabled, and a ready on-device model. Full Disk Access is required. Bookmarks are never edited or deleted by the app.
 
-### Validation
+Local HTTP fixtures, extraction, response limits, cancellation, saved-review persistence, HEAD-404 fallback, and actual on-device AI checks passed. The signed Release app was confirmed to launch and read bookmarks locally. App and DMG signatures, notarization tickets, Gatekeeper acceptance, and final package contents/checksum were verified.
 
-The app/extension workflow was confirmed working on a second Mac. HTTP fixtures, page extraction, response limits, cancellation, saved-review persistence, address-change rejection, HEAD-404 fallback, actual on-device model reviews, app signatures, and DMG contents/checksum were checked before publication.
-
-A Developer ID-signed and notarized release will follow when paid developer-account access is available. This release is intentionally marked **prerelease**.
+The earlier development workflow was tested on a second Mac. A second-Mac installation and persistent Safari extension activation test of this notarized release remains pending. Intel support and Safari profile coverage remain unverified. Sign-in and JavaScript-dependent pages may require manual verification in Safari.

@@ -7,28 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		910459AF3079CEBA007A170E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910459AE3079CEBA007A170E /* AppDelegate.swift */; };
 		910459B33079CEBA007A170E /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 910459B13079CEBA007A170E /* Main.html */; };
 		910459B53079CEBA007A170E /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 910459B43079CEBA007A170E /* Icon.png */; };
 		910459B73079CEBA007A170E /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 910459B63079CEBA007A170E /* Style.css */; };
 		910459B93079CEBA007A170E /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = 910459B83079CEBA007A170E /* Script.js */; };
-		910459BB3079CEBA007A170E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910459BA3079CEBA007A170E /* ViewController.swift */; };
-		910459BE3079CEBA007A170E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 910459BC3079CEBA007A170E /* Main.storyboard */; };
 		910459C03079CEBA007A170E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 910459BF3079CEBA007A170E /* Assets.xcassets */; };
 		910459C73079CEBA007A170E /* Safari Bookmark Checker Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 910459C63079CEBA007A170E /* Safari Bookmark Checker Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		910459CC3079CEBA007A170E /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910459CB3079CEBA007A170E /* SafariWebExtensionHandler.swift */; };
 		910459DB3079CEBA007A170E /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = 910459D83079CEBA007A170E /* popup.html */; };
 		910459DC3079CEBA007A170E /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 910459D93079CEBA007A170E /* manifest.json */; };
 		910459DD3079CEBA007A170E /* popup.css in Resources */ = {isa = PBXBuildFile; fileRef = 910459DA3079CEBA007A170E /* popup.css */; };
-		B00D00000000000000000000 /* Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00C00000000000000000000; };
-		B00D00000000000000000001 /* BookmarkDuplicateDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00C00000000000000000001; };
-		B00D00000000000000000002 /* BookmarkReaderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00C00000000000000000002; };
-		B00D00000000000000000003 /* BookmarkStatusFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00C00000000000000000003; };
-		B00D00000000000000000004 /* BookmarkValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00C00000000000000000004; };
-		B00E00000000000000000002 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B00E00000000000000000001; };
-		B01000000000000000000000 /* PageContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F00000000000000000000; };
-		B01000000000000000000001 /* AIPageReviewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F00000000000000000001; };
-		B01000000000000000000002 /* AIPageReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F00000000000000000002; };
+		B00D00000000000000000000 /* ../../Sources/Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00C00000000000000000000 /* ../../Sources/Bookmark.swift */; };
+		B00D00000000000000000001 /* ../../Sources/BookmarkDuplicateDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00C00000000000000000001 /* ../../Sources/BookmarkDuplicateDetector.swift */; };
+		B00D00000000000000000002 /* ../../Sources/BookmarkReaderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00C00000000000000000002 /* ../../Sources/BookmarkReaderApp.swift */; };
+		B00D00000000000000000003 /* ../../Sources/BookmarkStatusFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00C00000000000000000003 /* ../../Sources/BookmarkStatusFilter.swift */; };
+		B00D00000000000000000004 /* ../../Sources/BookmarkValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00C00000000000000000004 /* ../../Sources/BookmarkValidator.swift */; };
+		B00E00000000000000000002 /* ../../Extension/icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B00E00000000000000000001 /* ../../Extension/icon.png */; };
+		B01000000000000000000000 /* ../../Sources/PageContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F00000000000000000000 /* ../../Sources/PageContent.swift */; };
+		B01000000000000000000001 /* ../../Sources/AIPageReviewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F00000000000000000001 /* ../../Sources/AIPageReviewer.swift */; };
+		B01000000000000000000002 /* ../../Sources/AIPageReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F00000000000000000002 /* ../../Sources/AIPageReviewView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,15 +67,15 @@
 		910459D83079CEBA007A170E /* popup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = popup.html; path = ../../../Extension/popup.html; sourceTree = "<group>"; };
 		910459D93079CEBA007A170E /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = manifest.json; path = ../../../Extension/manifest.json; sourceTree = "<group>"; };
 		910459DA3079CEBA007A170E /* popup.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = popup.css; path = ../../../Extension/popup.css; sourceTree = "<group>"; };
-		B00C00000000000000000000 /* Bookmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "../../Sources/Bookmark.swift"; sourceTree = SOURCE_ROOT; };
-		B00C00000000000000000001 /* BookmarkDuplicateDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "../../Sources/BookmarkDuplicateDetector.swift"; sourceTree = SOURCE_ROOT; };
-		B00C00000000000000000002 /* BookmarkReaderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "../../Sources/BookmarkReaderApp.swift"; sourceTree = SOURCE_ROOT; };
-		B00C00000000000000000003 /* BookmarkStatusFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "../../Sources/BookmarkStatusFilter.swift"; sourceTree = SOURCE_ROOT; };
-		B00C00000000000000000004 /* BookmarkValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "../../Sources/BookmarkValidator.swift"; sourceTree = SOURCE_ROOT; };
-		B00E00000000000000000001 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ../../Extension/icon.png; sourceTree = SOURCE_ROOT; };
-		B00F00000000000000000000 /* PageContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "../../Sources/PageContent.swift"; sourceTree = SOURCE_ROOT; };
-		B00F00000000000000000001 /* AIPageReviewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "../../Sources/AIPageReviewer.swift"; sourceTree = SOURCE_ROOT; };
-		B00F00000000000000000002 /* AIPageReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "../../Sources/AIPageReviewView.swift"; sourceTree = SOURCE_ROOT; };
+		B00C00000000000000000000 /* ../../Sources/Bookmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ../../Sources/Bookmark.swift; sourceTree = SOURCE_ROOT; };
+		B00C00000000000000000001 /* ../../Sources/BookmarkDuplicateDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ../../Sources/BookmarkDuplicateDetector.swift; sourceTree = SOURCE_ROOT; };
+		B00C00000000000000000002 /* ../../Sources/BookmarkReaderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ../../Sources/BookmarkReaderApp.swift; sourceTree = SOURCE_ROOT; };
+		B00C00000000000000000003 /* ../../Sources/BookmarkStatusFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ../../Sources/BookmarkStatusFilter.swift; sourceTree = SOURCE_ROOT; };
+		B00C00000000000000000004 /* ../../Sources/BookmarkValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ../../Sources/BookmarkValidator.swift; sourceTree = SOURCE_ROOT; };
+		B00E00000000000000000001 /* ../../Extension/icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ../../Extension/icon.png; sourceTree = SOURCE_ROOT; };
+		B00F00000000000000000000 /* ../../Sources/PageContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ../../Sources/PageContent.swift; sourceTree = SOURCE_ROOT; };
+		B00F00000000000000000001 /* ../../Sources/AIPageReviewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ../../Sources/AIPageReviewer.swift; sourceTree = SOURCE_ROOT; };
+		B00F00000000000000000002 /* ../../Sources/AIPageReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ../../Sources/AIPageReviewView.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,14 +113,14 @@
 		910459AD3079CEBA007A170E /* Safari Bookmark Checker */ = {
 			isa = PBXGroup;
 			children = (
-				B00F00000000000000000000 /* PageContent.swift */,
-				B00F00000000000000000001 /* AIPageReviewer.swift */,
-				B00F00000000000000000002 /* AIPageReviewView.swift */,
-				B00C00000000000000000000 /* Bookmark.swift */,
-				B00C00000000000000000001 /* BookmarkDuplicateDetector.swift */,
-				B00C00000000000000000002 /* BookmarkReaderApp.swift */,
-				B00C00000000000000000003 /* BookmarkStatusFilter.swift */,
-				B00C00000000000000000004 /* BookmarkValidator.swift */,
+				B00F00000000000000000000 /* ../../Sources/PageContent.swift */,
+				B00F00000000000000000001 /* ../../Sources/AIPageReviewer.swift */,
+				B00F00000000000000000002 /* ../../Sources/AIPageReviewView.swift */,
+				B00C00000000000000000000 /* ../../Sources/Bookmark.swift */,
+				B00C00000000000000000001 /* ../../Sources/BookmarkDuplicateDetector.swift */,
+				B00C00000000000000000002 /* ../../Sources/BookmarkReaderApp.swift */,
+				B00C00000000000000000003 /* ../../Sources/BookmarkStatusFilter.swift */,
+				B00C00000000000000000004 /* ../../Sources/BookmarkValidator.swift */,
 				910459AE3079CEBA007A170E /* AppDelegate.swift */,
 				910459BA3079CEBA007A170E /* ViewController.swift */,
 				910459BC3079CEBA007A170E /* Main.storyboard */,
@@ -158,7 +155,7 @@
 		910459D73079CEBA007A170E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				B00E00000000000000000001 /* icon.png */,
+				B00E00000000000000000001 /* ../../Extension/icon.png */,
 				910459D83079CEBA007A170E /* popup.html */,
 				910459D93079CEBA007A170E /* manifest.json */,
 				910459DA3079CEBA007A170E /* popup.css */,
@@ -212,7 +209,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 2700;
-				LastUpgradeCheck = 2700;
+				LastUpgradeCheck = 2710;
 				TargetAttributes = {
 					910459AA3079CEBA007A170E = {
 						CreatedOnToolsVersion = 27.0;
@@ -256,7 +253,7 @@
 		910459C43079CEBA007A170E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			files = (
-				B00E00000000000000000002 /* icon.png in Resources */,
+				B00E00000000000000000002 /* ../../Extension/icon.png in Resources */,
 				910459DC3079CEBA007A170E /* manifest.json in Resources */,
 				910459DB3079CEBA007A170E /* popup.html in Resources */,
 				910459DD3079CEBA007A170E /* popup.css in Resources */,
@@ -268,14 +265,14 @@
 		910459A73079CEBA007A170E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			files = (
-				B01000000000000000000000 /* PageContent.swift in Sources */,
-				B01000000000000000000001 /* AIPageReviewer.swift in Sources */,
-				B01000000000000000000002 /* AIPageReviewView.swift in Sources */,
-				B00D00000000000000000000 /* Bookmark.swift in Sources */,
-				B00D00000000000000000001 /* BookmarkDuplicateDetector.swift in Sources */,
-				B00D00000000000000000002 /* BookmarkReaderApp.swift in Sources */,
-				B00D00000000000000000003 /* BookmarkStatusFilter.swift in Sources */,
-				B00D00000000000000000004 /* BookmarkValidator.swift in Sources */,
+				B01000000000000000000000 /* ../../Sources/PageContent.swift in Sources */,
+				B01000000000000000000001 /* ../../Sources/AIPageReviewer.swift in Sources */,
+				B01000000000000000000002 /* ../../Sources/AIPageReviewView.swift in Sources */,
+				B00D00000000000000000000 /* ../../Sources/Bookmark.swift in Sources */,
+				B00D00000000000000000001 /* ../../Sources/BookmarkDuplicateDetector.swift in Sources */,
+				B00D00000000000000000002 /* ../../Sources/BookmarkReaderApp.swift in Sources */,
+				B00D00000000000000000003 /* ../../Sources/BookmarkStatusFilter.swift in Sources */,
+				B00D00000000000000000004 /* ../../Sources/BookmarkValidator.swift in Sources */,
 			);
 		};
 		910459C23079CEBA007A170E /* Sources */ = {
@@ -348,6 +345,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -372,6 +370,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -411,6 +410,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -428,6 +428,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 			};
 			name = Release;
@@ -437,6 +438,8 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = MV65BFBFT7;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
@@ -449,7 +452,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 0.1.0;
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -471,6 +474,8 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = MV65BFBFT7;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
@@ -483,7 +488,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 0.1.0;
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -505,10 +510,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
 				CODE_SIGN_ENTITLEMENTS = "Safari Bookmark Checker/BookmarkChecker.entitlements";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 2;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = MV65BFBFT7;
 				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
@@ -547,10 +554,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
 				CODE_SIGN_ENTITLEMENTS = "Safari Bookmark Checker/BookmarkChecker.entitlements";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 2;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = MV65BFBFT7;
 				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;

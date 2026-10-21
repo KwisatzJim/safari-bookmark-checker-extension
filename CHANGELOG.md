@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.0 — 2026-10-21
+
+- Distribute an Apple silicon Release app and Safari extension signed with Developer ID.
+- Enable hardened runtime, secure timestamps, and remove the debugging entitlement.
+- Add Apple notarization, stapled approval tickets, signed DMG packaging, and updated installation instructions.
+- Add repeatable release build and packaging scripts.
+
+The signed Release app was confirmed to launch and read bookmarks locally. The notarized package passes signature, ticket, and Gatekeeper checks. A second-Mac installation and persistent extension activation test of this notarized release remains pending. Intel compatibility and Safari profile coverage remain unverified.
+
 ## 0.1.0-dev.1 — 2026-10-12
 
 First GitHub development prerelease for Apple silicon Macs.

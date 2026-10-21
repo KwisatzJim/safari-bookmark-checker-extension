@@ -14,7 +14,19 @@
 
 GitHub publication uses tag `v0.1.0-dev.1`, marked prerelease, with the development DMG and checksum. This checklist records the development validation; it is not a notarized-release checklist.
 
-## When paid account access returns
+## v0.1.0 — 2026-10-21
+
+- [x] Developer ID Application identity verified.
+- [x] App and extension signed with hardened runtime, secure timestamps, and no debugging entitlement.
+- [x] Signed Release app launch and bookmark reading confirmed locally.
+- [x] HTTP fixtures, persistence, HEAD fallback, and actual on-device AI checks passed.
+- [x] Apple accepted app submission `42c48341-b6fe-4cfe-abca-590d9ada76b3`.
+- [x] App ticket stapled and validated; Gatekeeper accepted as Notarized Developer ID.
+- [x] Apple accepted signed DMG submission `da4980b1-7e26-4518-8777-3abdf1fc0e40`.
+- [x] DMG ticket stapled and validated; Gatekeeper accepted the DMG.
+- [ ] Second-Mac notarized installation and persistent extension activation test.
+
+## Release procedure
 
 1. Create and verify a usable Developer ID Application signing identity.
 2. Build a Release configuration with that identity and validate final entitlements, hardened runtime, and secure timestamps.
